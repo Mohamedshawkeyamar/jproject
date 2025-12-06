@@ -1,0 +1,382 @@
+:root {
+            --color-bg: #FFF2F2;
+            --color-primary: #2D336B;
+            --color-primary-soft: #7886C7;
+            --color-accent: #A9B5DF;
+            --color-danger: #EF4444;
+            --color-text-main: #0f172a;
+            --color-text-soft: #475569;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top left, #FFF2F2 0, #A9B5DF 40%, #2D336B 100%);
+            color: var(--color-text-main);
+            padding: 0 16px 24px;
+            padding-top: 100px; /* navbar fixed-top */
+        }
+
+        .page-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            border: 1px solid rgba(120, 134, 199, 0.45);
+            box-shadow:
+                0 24px 55px rgba(45, 51, 107, 0.28),
+                0 0 0 1px rgba(148, 163, 184, 0.28);
+            overflow: hidden;
+        }
+
+        .card-header-custom {
+            padding: 22px 26px;
+            border-bottom: 1px solid rgba(120, 134, 199, 0.4);
+            background: radial-gradient(circle at top right, rgba(120, 134, 199, 0.35), transparent 60%);
+        }
+
+        .badge-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #EEF2FF;
+            border: 1px solid rgba(120, 134, 199, 0.7);
+            font-size: 12px;
+            color: var(--color-primary);
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25);
+        }
+
+        .main-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin: 10px 0 4px 0;
+            color: var(--color-primary);
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--color-text-soft);
+            max-width: 480px;
+        }
+
+        .btn-logout {
+            border-radius: 999px;
+            border: 1px solid rgba(248, 113, 113, 0.9);
+            color: #991b1b;
+            background: #FEE2E2;
+            font-size: 13px;
+            padding: 6px 14px;
+        }
+
+        .btn-logout:hover {
+            background: #FECACA;
+            color: #7f1d1d;
+        }
+
+        .filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .filter-chip {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.9);
+            color: var(--color-text-soft);
+            text-decoration: none;
+            background: #F8FAFC;
+        }
+
+        .filter-chip.active {
+            border-color: var(--color-primary);
+            color: #ffffff;
+            background: var(--color-primary);
+        }
+
+        .card-body-custom {
+            padding: 22px 26px 24px 26px;
+        }
+
+        /* Login card */
+        .login-wrapper {
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .login-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--color-primary);
+        }
+
+        .login-subtitle {
+            font-size: 13px;
+            color: var(--color-text-soft);
+            margin-bottom: 18px;
+        }
+
+        .form-label {
+            font-size: 13px;
+            color: var(--color-text-main);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .form-control,
+        .form-control:focus {
+            background-color: #F9FAFB;
+            border-radius: 12px;
+            border: 1px solid #CBD5F1;
+            color: var(--color-text-main);
+            font-size: 14px;
+        }
+
+        .form-control:focus {
+            border-color: var(--color-primary-soft);
+            box-shadow: 0 0 0 1px rgba(120, 134, 199, 0.7);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary));
+            border: none;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 10px 18px;
+            box-shadow: 0 12px 30px rgba(45, 51, 107, 0.45);
+            transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 40px rgba(45, 51, 107, 0.55);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 10px 24px rgba(45, 51, 107, 0.4);
+        }
+
+        .alert {
+            border-radius: 12px;
+            font-size: 13px;
+        }
+
+        .alert-danger {
+            border-color: rgba(248, 113, 113, 0.5);
+            background: #FEF2F2;
+            color: #B91C1C;
+        }
+
+        /* Report cards */
+        .report-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .report-card {
+            background: linear-gradient(140deg, #ffffff, #f1f5f9);
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.8);
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 12px 28px rgba(148, 163, 184, 0.5);
+        }
+
+        .report-image {
+            width: 100%;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 18px 18px 0 0;
+        }
+
+        .report-content {
+            padding: 12px 14px 8px 14px;
+            flex: 1;
+        }
+
+        .report-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--color-text-main);
+            margin-bottom: 6px;
+        }
+
+        .report-meta {
+            font-size: 12px;
+            color: var(--color-text-soft);
+            margin-bottom: 6px;
+        }
+
+        .report-description {
+            font-size: 13px;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border-radius: 999px;
+            padding: 3px 9px;
+            font-size: 11px;
+            border: 1px solid;
+        }
+
+        .status-pending {
+            border-color: rgba(234, 179, 8, 0.8);
+            color: #854d0e;
+            background: #FEF3C7;
+        }
+
+        .status-real {
+            border-color: rgba(34, 197, 94, 0.8);
+            color: #166534;
+            background: #DCFCE7;
+        }
+
+        .status-fake {
+            border-color: rgba(248, 113, 113, 0.8);
+            color: #B91C1C;
+            background: #FEE2E2;
+        }
+
+        .card-footer-custom {
+            padding: 10px 12px 12px 12px;
+            border-top: 1px solid rgba(148, 163, 184, 0.8);
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            background: #F9FAFB;
+        }
+
+        .btn-sm-action {
+            flex: 1;
+            border-radius: 999px;
+            font-size: 12px;
+            padding: 6px 8px;
+            border-width: 1px;
+        }
+
+        .btn-outline-success-custom {
+            border-color: rgba(34, 197, 94, 0.8);
+            color: #166534;
+            background: #ECFDF3;
+        }
+
+        .btn-outline-success-custom:hover {
+            background: #22c55e;
+            color: #ecfdf5;
+        }
+
+        .btn-outline-danger-custom {
+            border-color: rgba(248, 113, 113, 0.9);
+            color: #B91C1C;
+            background: #FEF2F2;
+        }
+
+        .btn-outline-danger-custom:hover {
+            background: #EF4444;
+            color: #FEF2F2;
+        }
+
+        .empty-state {
+            padding: 40px 10px;
+            text-align: center;
+            color: var(--color-text-soft);
+            font-size: 14px;
+        }
+
+        .empty-state span {
+            display: inline-block;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .card-header-custom {
+                padding: 18px 18px;
+            }
+            .card-body-custom {
+                padding: 20px 18px 22px 18px;
+            }
+        }
+        .active-btn {
+    background-color: rgba(0,0,0,0.1); /* أو أي لون فاتح للتمييز */
+    color: #000; /* أو أي لون يتباين مع الخلفية */
+}
+
+
+
+
+
+
+
+
+/* الأزرار الصغيرة في الفوتر */
+.btn-sm-action {
+    flex: 1;
+    border-radius: 999px;
+    font-size: 12px;
+    padding: 6px 8px;
+    border-width: 1px;
+    color: #2D336B; /* لون النص الأساسي لجميع الأزرار */
+    background-color: #F8FAFC; /* خلفية جميع الأزرار */
+    border-color: #CBD5F1; /* حدود موحدة */
+    transition: background 0.2s, color 0.2s;
+}
+
+/* عند التحويم */
+.btn-sm-action:hover {
+    background-color: #D1D5DB; /* أغمق شوي عند hover */
+    color: #2D336B;
+}
+
+/* الزر النشط يوضح الحالة الحالية */
+.active-btn {
+    background-color: #A9B5DF; /* خلفية أغمق للتمييز */
+    color: #FFF; /* نص أبيض لتباين أفضل */
+    border-color: #7886C7;
+}
+
+/* ألوان خاصة بالأنواع فقط إذا تحب (يمكن إبقاؤها موحدة) */
+.btn-outline-success-custom, 
+.btn-outline-danger-custom,
+.btn-outline-primary-custom,
+.btn-outline-secondary-custom {
+    color: #2D336B; /* نص موحد */
+    background-color: #F8FAFC; /* خلفية موحدة */
+    border-color: #CBD5F1; /* حدود موحدة */
+}
+
+.btn-outline-success-custom:hover,
+.btn-outline-danger-custom:hover,
+.btn-outline-primary-custom:hover,
+.btn-outline-secondary-custom:hover {
+    background-color: #D1D5DB; /* أغمق شوي عند hover */
+    color: #2D336B;
+}
